@@ -1,6 +1,6 @@
 ---
 title: "Final S&DS 230 Project"
-author: 
+author: Flor Villanueva, Harrison Muth, Izzy Lopez, Taylor Tran
 subtitle: Due May 7, 2022 @ 11:59 am EST
 output: 
   word_document: default
@@ -13,7 +13,12 @@ knitr::opts_chunk$set(echo = TRUE)
 library(car)
 library(corrplot)
 library(leaps)
-source("http://www.reuningscherer.net/s&ds230/Rfuncs/regJDRS.txt")
 
 ```
+--------------
+Introduction
 
+--------------
+```{r}
+wb <- read.csv("http://www.reuningscherer.net/s&ds230/data/WB.2016.csv")
+```
