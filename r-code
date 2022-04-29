@@ -8,17 +8,32 @@ output:
   html_document: default
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup}
 library(car)
+library(carData)
 library(corrplot)
-library(leaps)
 
 ```
---------------
-Introduction
 
---------------
-```{r}
+Introduction
+- predicted = military expenditure
+
+```{r Data Cleaning}
+# Read in World Bank data from 2016
 wb <- read.csv("http://www.reuningscherer.net/s&ds230/data/WB.2016.csv")
+names(wb)
+dim(wb)
+# Remove unnecessary columns
+# - Code
+# - Fertility66
+# - Forest94
+# - GunTotal
+# - GunHomicide
+# - GunSuicide
+# - GunUnint
+# - GunUndet
+# - GunsPer100
+wb <- wb[, c(-2, -11, -21, -24, -25, -26, -27, -28, -29)]
+names(wb)
+dim(wb)
 ```
